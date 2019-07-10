@@ -1,0 +1,27 @@
+{
+  "name": "retro-game",
+  "version": "0.1.0",
+  "description": "An homage to the characters that graced my childhood.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkim3360/retro-game.git"
+  },
+  "keywords": [
+    "retro"
+  ],
+  "author": "Daeho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkim3360/retro-game/issues"
+  },
+  "homepage": "https://github.com/jkim3360/retro-game#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0"
+  }
+}

@@ -1,0 +1,295 @@
+/* index.html */
+
+.pikachu {
+    position: absolute;
+    left: 0;
+    height: 20%;
+}
+
+.sleep {
+    position: absolute;
+    top: 110px;
+    left: 800px;
+    height: 20%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    animation: .8s linear infinite blink;
+}
+
+
+
+/* main.html */
+
+body {
+    background: black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    line-height: 3;
+    /* display: flex;
+    justify-content: center; */
+}
+
+h1 {
+    -webkit-animation: color-change .3s infinite;
+    -moz-animation: color-change .3s infinite;
+    -o-animation: color-change .3s infinite;
+    -ms-animation: color-change .3s infinite;
+    animation: color-change .3s infinite;
+}
+
+.sky {
+    
+    background: skyblue;
+    position: relative;
+    height: 95vh;
+    width: 99vw;
+}
+.sky.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cloud {
+    position: absolute;
+    top: 90px;
+    left: 75px;
+    flex-wrap: wrap;
+    height: 10%;
+    z-index: 1;
+}
+
+.one {
+    top: 180px;
+    left: -50px;
+    z-index: 0;
+    height: 3%;
+    position: absolute;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 16s;
+}
+
+.two {
+    top: 180px;
+    left: -50px;
+    z-index: 0;
+    position: absolute;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 13s;
+}
+
+.three {
+    top: 400px;
+    left: -50px;
+    height: 30%;
+    position: absolute;
+    z-index: 1;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 3s;
+}
+
+.four {
+    top: 200px;
+    left: -50px;
+    z-index: 1;
+    height: 18%;
+    -webkit-animation: run 6s linear infinite;
+    /* -webkit-animation-delay: 2s; */
+    -webkit-animation: run 6s linear infinite;
+    -webkit-animation: run 6s linear infinite;
+}
+
+.five {
+    top: 450px;
+    left: -50px;
+    height: 15%;
+    position: absolute;
+    z-index: 1;
+    -webkit-animation:run 19s linear infinite;
+    -webkit-animation-name: run 19s linear infinite;
+    -webkit-animation-duration: run 19s linear infinite;
+}
+
+.six {
+    top: 180px;
+    left: -50px;
+    height: 5%;
+    z-index: 0;
+    position: absolute;
+    -webkit-animation:run 45s linear infinite;
+    -webkit-animation-name: run 45s linear infinite;
+    -webkit-animation-duration: run 45s linear infinite;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+div.dodger {
+    box-sizing: content-box;
+    height: 25%;
+}
+
+div.dodger.image {
+    top: 0px;
+    left: 0px;
+    border: none;
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    transition: all .7s;
+    content: url(images/kirby.png);
+}
+
+div.dodger.right {
+    size: 25%;
+    content: url(images/kirby-right.png);
+}
+
+.star {
+    position: absolute;
+    top: 25px;
+    left: 1050px;
+    height: 10%;
+    content: url(images/mariostar.png);
+    -webkit-animation: run 3s linear infinite, spin 1s linear infinite;
+    -moz-animation: run 3s linear infinite, spin 1s linear infinite;
+    animation: run 3s linear infinite, spin 1s linear infinite;
+}
+
+.trump {
+    position: absolute;
+    top: 400px;
+    left: 1050px;
+    height: 10%;
+    content: url(images/trumpwall.png);
+    -webkit-animation: run 6s linear infinite, spin 6s linear infinite;
+    -moz-animation: run 6s linear infinite, spin 6s linear infinite;
+    animation: run 6s linear infinite, spin 6s linear infinite;
+}
+
+.sword {
+    position: absolute;
+    top: 550px;
+    left: -100px;
+    height: 10%;
+    content: url(images/sword.png);
+    -webkit-animation: run 3s linear infinite, spin .5s linear infinite;
+    -moz-animation: run 3s linear infinite, spin .5s linear infinite;
+    animation: run 3s linear infinite, spin .5s linear infinite;
+    -webkit-animation-delay: 2s;
+}
+
+@keyframes blink {
+
+    50% {
+        opacity: 0 ;
+    }
+  
+}
+
+@-webkit-keyframes color-change {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: lightpink;
+    }
+    100% {
+        color: pink;
+    }
+}
+
+@-moz-keyframes color-change {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: lightcyan;
+    }
+    100% {
+        color: pink;
+    }
+}
+
+@-ms-keyframes color-change {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: lightcyan;
+    }
+    100% {
+        color: pink;
+    }
+}
+
+@-o-keyframes color-change {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: lightpink;
+    }
+    100% {
+        color: pink;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: yellow;
+    }
+    100% {
+        color: orange;
+    }
+}
+
+@-webkit-keyframes run {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 110%
+    }
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
