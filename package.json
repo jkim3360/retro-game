@@ -4,7 +4,9 @@
   "description": "An homage to the characters that graced my childhood.",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "fix-all": "eslint --fix ."
   },
   "repository": {
     "type": "git",
