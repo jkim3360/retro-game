@@ -1,6 +1,6 @@
 /* index.html */
-/* eslint-disable */
 
+/* eslint-disable */
 
 .pikachu {
     position: absolute;
@@ -20,8 +20,8 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 140px;
-    left: 800px;
+    top: 65px;
+    left: 775px;
     height: 19%;
 }
 
@@ -39,12 +39,18 @@
 
 /* main.html */
 
+.landing {
+    background: black;
+}
+
 body {
     background: skyblue;
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
-    line-height: 3;    
+    line-height: 3;
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -56,6 +62,14 @@ h1 {
     animation: color-change .3s infinite;
 }
 
+.sky .main {
+    background: skyblue;
+    position: relative;
+    height: 600px;
+    width: 100%;
+    margin: auto 0;
+}
+
 .sky {
     background: skyblue;
     position: relative;
@@ -64,28 +78,100 @@ h1 {
     margin: auto 0;
 }
 
-.sky.main {
+.sky.index {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+#messageBoxIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightcyan;
+    font-size: 22px;
+    border: 12px solid white;
+    height: 175px;
+    border-radius: 25%;
+    position: absolute;
+    margin: 0 auto;
+    top: 55%;
+    width: 20%;
+    line-height: 40px;
+}
+
+#messageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightcyan;
+    font-size: 22px;
+    border: 5px solid white;
+    height: 200px;
+    border-radius: 25%;
+    position: absolute;
+    right: 7%;
+    top: 3%;
+    width: 20%;
+    line-height: 40px;
+}
+
+.messageIndex {
+    width: 80%;
+    text-align: center;
+}
+
+.message {
+    width: 80%;
+    text-align: center;
+}
+
+#scoreTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightcyan;
+}
+
 .scoreDiv {
     display: flex;
     position: absolute;
-    bottom: 4%;
-    right: 3%;
-    z-index: 2;    
+    top: 10%;
+    left: 4.6%;
+    z-index: 2;
+    background-color: transparent;
 }
 
 .clock {
     display: flex;
     position: absolute;
-    bottom: 2%;
-    right: 3%;
-    z-index: 1;   
+    top: 7%;
+    left: 4.5%;
+    z-index: 2;
+    background: transparent;
 }
+
+progress {
+    display: flex;
+    position: absolute;
+    width: 25%;
+    left: 4.2%;
+    top: 4%;
+
+}
+
+progress[value] {
+
+    -webkit-appearance: none;
+     appearance: none;
+    border: 1px solid white;
+    width: 250px;
+    height: 20px;
+  }
+
+
+
 
 .cloud {
     position: absolute;
@@ -103,7 +189,7 @@ h1 {
     height: 3%;
     position: absolute;
     -webkit-animation: linear infinite;
-    -webkit-animation-name: run;
+    -webkit-animation-name: fly;
     -webkit-animation-duration: 16s;
 }
 
@@ -113,9 +199,11 @@ h1 {
     z-index: 0;
     position: absolute;
     -webkit-animation: linear infinite;
-    -webkit-animation-name: run;
+    -webkit-animation-name: fly;
     -webkit-animation-duration: 13s;
 }
+
+
 
 .three {
     top: 400px;
@@ -124,7 +212,7 @@ h1 {
     position: absolute;
     z-index: 1;
     -webkit-animation: linear infinite;
-    -webkit-animation-name: run;
+    -webkit-animation-name: fly;
     -webkit-animation-duration: 3s;
 }
 
@@ -133,10 +221,10 @@ h1 {
     left: -50px;
     z-index: 1;
     height: 18%;
-    -webkit-animation: run 6s linear infinite;
+    -webkit-animation: fly 6s linear infinite;
     /* -webkit-animation-delay: 2s; */
-    -webkit-animation: run 6s linear infinite;
-    -webkit-animation: run 6s linear infinite;
+    -webkit-animation: fly 6s linear infinite;
+    -webkit-animation: fly 6s linear infinite;
 }
 
 .five {
@@ -145,9 +233,9 @@ h1 {
     height: 15%;
     position: absolute;
     z-index: 1;
-    -webkit-animation: run 19s linear infinite;
-    -webkit-animation-name: run 19s linear infinite;
-    -webkit-animation-duration: run 19s linear infinite;
+    -webkit-animation: fly 19s linear infinite;
+    -webkit-animation-name: fly 19s linear infinite;
+    -webkit-animation-duration: fly 19s linear infinite;
 }
 
 .six {
@@ -156,9 +244,9 @@ h1 {
     height: 5%;
     z-index: 0;
     position: absolute;
-    -webkit-animation: run 45s linear infinite;
-    -webkit-animation-name: run 45s linear infinite;
-    -webkit-animation-duration: run 45s linear infinite;
+    -webkit-animation: fly 45s linear infinite;
+    -webkit-animation-name: fly 45s linear infinite;
+    -webkit-animation-duration: fly 45s linear infinite;
 }
 
 .seven {
@@ -176,29 +264,36 @@ h1 {
 }
 
 div.dodger {
-
     box-sizing: content-box;
 }
 
 div.dodger.image {
-    top: 0px;
+    top: 100px;
     left: 0px;
     /* border: none; */
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     position: absolute;
     transition: all .7s;
-    content: url(images/kirby.png);
+    content: url(images/kirby-flying.gif);
 }
 
 div.dodger.right {
-    size: 25%;
-    content: url(images/kirby-right.png);
+    /* size: 25%; */
+    content: url(images/kirby-flying-right.gif);
 }
 
 div.dodger.flash {
     animation: flash .7s linear
 }
+
+/* .heart {
+    top: 200px;
+    height: 25%;
+    content: url(images/heart.png);
+    height: 5%;
+    animation: fly 2.2s linear infinite, spin .4s linear infinite;
+} */
 
 .star {
     position: absolute;
@@ -206,37 +301,41 @@ div.dodger.flash {
     left: 1050px;
     height: 10%;
     content: url(images/mariostar.png);
-    -webkit-animation: run 3s linear infinite, spin 1s linear infinite;
-    -moz-animation: run 3s linear infinite, spin 1s linear infinite;
-    animation: run 3s linear infinite, spin 1s linear infinite;
+    -webkit-animation: fly 3s linear infinite, spin .2s linear infinite;
+    -moz-animation: fly 3s linear infinite, spin .2s linear infinite;
+    animation: fly 2.2s linear infinite, spin .4s linear infinite;
 }
 
 .trump {
     position: absolute;
     top: 600px;
-    left: 1050px;
+    left: -400px;
     height: 10%;
     content: url(images/trumpwall.png);
-    -webkit-animation: run 10s linear infinite;
+    -webkit-animation: fly 10s linear infinite;
     /* spin 6s linear infinite; */
-    -moz-animation: run 10s linear infinite;
+    -moz-animation: fly 10s linear infinite;
     /* spin 6s linear infinite; */
-    animation: run 10s linear infinite, 
-    /* spin 6s linear infinite; */
+    animation: fly 10s linear infinite, /* spin 6s linear infinite; */;
+    animation-delay: 4s
 }
 
 .sword {
     position: absolute;
     top: 500px;
     left: -100px;
-    height: 10%;
+    height: 15%;
     content: url(images/sword.png);
-    -webkit-animation: run 5s linear infinite, spin .2s linear infinite;
-    -moz-animation: run 5s linear infinite, spin .2s linear infinite;
-    animation: run 5s linear infinite, spin .2s linear infinite;
+    -webkit-animation: fly 3s ease-in-out infinite, spin .2s ease-in infinite;
+    -moz-animation: fly 3s ease-in-out infinite, spin .2s ease-in infinite;
+    animation: fly 3s ease-in-out infinite, spin .2s ease-in infinite;
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
     animation-delay: 2s;
+}
+
+#music {
+    visibility: hidden;
 }
 
 @keyframes blink {
@@ -250,50 +349,14 @@ div.dodger.flash {
         color: blue;
     }
     50% {
-        color: lightpink;
+        color: yellow;
     }
     100% {
-        color: pink;
+        color: orange;
     }
 }
 
 @-moz-keyframes color-change {
-    0% {
-        color: blue;
-    }
-    50% {
-        color: lightcyan;
-    }
-    100% {
-        color: pink;
-    }
-}
-
-@-ms-keyframes color-change {
-    0% {
-        color: blue;
-    }
-    50% {
-        color: lightcyan;
-    }
-    100% {
-        color: pink;
-    }
-}
-
-@-o-keyframes color-change {
-    0% {
-        color: blue;
-    }
-    50% {
-        color: lightpink;
-    }
-    100% {
-        color: pink;
-    }
-}
-
-@keyframes color-change {
     0% {
         color: blue;
     }
@@ -305,7 +368,43 @@ div.dodger.flash {
     }
 }
 
-@-webkit-keyframes run {
+@-ms-keyframes color-change {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: yellow;
+    }
+    100% {
+        color: orange;
+    }
+}
+
+@-o-keyframes color-change {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: yellow;
+    }
+    100% {
+        color: orange;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: rgb(3, 3, 116);
+    }
+    50% {
+        color: lightcoral;
+    }
+    100% {
+        color: yellow;
+    }
+}
+
+@-webkit-keyframes fly {
     0% {
         left: 0;
     }
@@ -337,26 +436,96 @@ div.dodger.flash {
 }
 
 @-webkit-keyframes flash {
-    0% { opacity: 1; } 
-    10% { opacity: .5; }
-    20% { opacity: .1; }
-    35% { opacity: .5 } 
-    50% { opacity: 1; }
-    65% { opacity: .5; }
-    80% { opacity: .1; }
-    90% { opacity: .5; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: .5;
+    }
+    20% {
+        opacity: .1;
+    }
+    35% {
+        opacity: .5
+    }
+    50% {
+        opacity: 1;
+    }
+    65% {
+        opacity: .5;
+    }
+    80% {
+        opacity: .1;
+    }
+    90% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes flash {
-    0% { opacity: 1; } 
-    10% { opacity: .5; }
-    20% { opacity: .1; 
-        color: white}
-    35% { opacity: .5 } 
-    50% { opacity: 1; }
-    65% { opacity: .5; }
-    80% { opacity: .1; 
-        color: white}
-    90% { opacity: .5; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: .5;
+    }
+    20% {
+        opacity: .1;
+        color: white
+    }
+    35% {
+        opacity: .5
+    }
+    50% {
+        opacity: 1;
+    }
+    65% {
+        opacity: .5;
+    }
+    80% {
+        opacity: .1;
+        color: white
+    }
+    90% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.koopa {
+    position: fixed;
+    left: -200px;
+    bottom: px;
+    margin-top: -25px;
+    margin-left: -25px;
+    height: 150px;
+    width: 150px;
+    /* background:red; */
+    animation: bounce 2s infinite, fly 10s infinite;
+    content: url(images/koopa.png);
+    animation-delay: 10s
+
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        bottom: 5px;
+    }
+    40%, 60% {
+        bottom: 12px;
+    }
+    20%, 80% {
+        bottom: 16px;
+    }
+    50% {
+        bottom: 25%;
+    }
+    100% {
+        bottom: 0;
+    }
 }
