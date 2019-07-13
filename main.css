@@ -2,45 +2,90 @@
 
 /* eslint-disable */
 
-.pikachu {
+.umbrella {
     position: absolute;
-    left: 0;
-    height: 20%;
+    top: -200px;
+    left: 100px;
+    height: 25%;
+    z-index: 1;
+    animation: fall 12s linear infinite;
 }
 
-.link {
+.magus {
     position: absolute;
-    left: 980px;
-    top: 110px;
-    height: 35%;
+    right: 195px;
+    top: 170px;
+    height: 25%;
     z-index: 1;
 }
 
 .sleep {
+    position: relative;
+    height: 27%;
+    width: 18%;
+    padding: 0;
+    left: 250px;
+    top: 17px;
+}
+
+#title {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    position: absolute;
-    top: 65px;
-    left: 775px;
-    height: 19%;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
 }
 
 .button {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     font-family: 'Press Start 2P', cursive;
+    font-size: 1.25rem;
     color: white;
     padding: 1rem 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 1.25rem;
     animation: .8s linear infinite blink;
+    height: 40;
+    width: 200px;
+    padding: 20px;
+}
+
+#playButton {
+    display: flex;
+    flex-direction: row;
+}
+
+#nameInput {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    flex-wrap: wrap;
+    height: 20px;
+    z-index: 1;
+    padding: 0;
+    border: 5px solid white;
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 0 10px 0;
+}
+
+#arrow {
+    color: white;
+    size: 24px;
+    position: relative;
+    left: 22%;
+    top: 28.5%;
 }
 
 /* main.html */
 
 .landing {
-    background: black;
+    background: skyblue;
 }
 
 body {
@@ -51,6 +96,12 @@ body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
 }
 
 h1 {
@@ -93,12 +144,13 @@ h1 {
     font-size: 22px;
     border: 12px solid white;
     height: 175px;
-    border-radius: 25%;
+    border-radius: 20%;
     position: absolute;
     margin: 0 auto;
-    top: 55%;
+    top: 70%;
     width: 20%;
     line-height: 40px;
+    z-index: 1;
 }
 
 #messageBox {
@@ -115,6 +167,7 @@ h1 {
     top: 3%;
     width: 20%;
     line-height: 40px;
+    z-index: 1;
 }
 
 .messageIndex {
@@ -158,26 +211,21 @@ progress {
     width: 25%;
     left: 4.2%;
     top: 4%;
-
 }
 
 progress[value] {
-
     -webkit-appearance: none;
-     appearance: none;
+    appearance: none;
     border: 1px solid white;
     width: 250px;
     height: 20px;
-  }
-
-
-
+}
 
 .cloud {
     position: absolute;
     top: 90px;
     left: 75px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     height: 10%;
     z-index: 1;
 }
@@ -203,14 +251,12 @@ progress[value] {
     -webkit-animation-duration: 13s;
 }
 
-
-
 .three {
     top: 400px;
     left: -50px;
     height: 30%;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     -webkit-animation: linear infinite;
     -webkit-animation-name: fly;
     -webkit-animation-duration: 3s;
@@ -232,7 +278,7 @@ progress[value] {
     left: -50px;
     height: 15%;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     -webkit-animation: fly 19s linear infinite;
     -webkit-animation-name: fly 19s linear infinite;
     -webkit-animation-duration: fly 19s linear infinite;
@@ -244,16 +290,16 @@ progress[value] {
     height: 5%;
     z-index: 0;
     position: absolute;
-    -webkit-animation: fly 45s linear infinite;
-    -webkit-animation-name: fly 45s linear infinite;
-    -webkit-animation-duration: fly 45s linear infinite;
+    -webkit-animation: fly 70s linear infinite;
+    -webkit-animation-name: fly 70s linear infinite;
+    -webkit-animation-duration: fly 70s linear infinite;
 }
 
 .seven {
-    top: 275px;
-    left: 1090px;
-    height: 13%;
     position: absolute;
+    right: 180px;
+    top: 270px;
+    height: 13%;
     z-index: 0;
 }
 
@@ -261,6 +307,17 @@ h1 {
     text-align: center;
     position: relative;
     z-index: 1;
+}
+
+.h1index {
+    border: 8px solid lightgoldenrodyellow;
+    border-radius: 30%;
+    padding: 20px;
+    margin: 20;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: #BAFFE0
 }
 
 div.dodger {
@@ -275,6 +332,7 @@ div.dodger.image {
     height: 125px;
     position: absolute;
     transition: all .7s;
+    z-index: 1;
     content: url(images/kirby-flying.gif);
 }
 
@@ -287,51 +345,58 @@ div.dodger.flash {
     animation: flash .7s linear
 }
 
-/* .heart {
-    top: 200px;
+.heart {
+    position: absolute;
+    top: 0px;
+    left: -100px;
     height: 25%;
     content: url(images/heart.png);
     height: 5%;
-    animation: fly 2.2s linear infinite, spin .4s linear infinite;
-} */
+    animation: spin 2s reverse 1s infinite, fly 7s linear 10s 1;
+    /* animation-delay: 5s; */
+}
 
 .star {
     position: absolute;
     top: 25px;
-    left: 1050px;
-    height: 10%;
+    left: -120px;
+    height: 75px;
     content: url(images/mariostar.png);
+    z-index: 2;
     -webkit-animation: fly 3s linear infinite, spin .2s linear infinite;
     -moz-animation: fly 3s linear infinite, spin .2s linear infinite;
-    animation: fly 2.2s linear infinite, spin .4s linear infinite;
+    animation: fly 3s linear infinite, spin .2s linear infinite, diagonal 2.2s linear infinite;
+    animation-delay: 2s;
 }
 
 .trump {
     position: absolute;
     top: 600px;
     left: -400px;
-    height: 10%;
+    height: 60px;
     content: url(images/trumpwall.png);
     -webkit-animation: fly 10s linear infinite;
     /* spin 6s linear infinite; */
     -moz-animation: fly 10s linear infinite;
     /* spin 6s linear infinite; */
-    animation: fly 10s linear infinite, /* spin 6s linear infinite; */;
-    animation-delay: 4s
+    animation: fly 10s linear infinite, /* spin 6s linear infinite; */
+    ;
+    animation-delay: 1s
 }
 
 .sword {
     position: absolute;
     top: 500px;
-    left: -100px;
+    left: -115px;
     height: 15%;
     content: url(images/sword.png);
-    -webkit-animation: fly 3s ease-in-out infinite, spin .2s ease-in infinite;
-    -moz-animation: fly 3s ease-in-out infinite, spin .2s ease-in infinite;
-    animation: fly 3s ease-in-out infinite, spin .2s ease-in infinite;
+    -webkit-animation: fly 3s ease-in-out infinite;
+    -moz-animation: fly 3s ease-in-out infinite;
+    animation: fly 3s ease-in-out infinite;
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
     animation-delay: 2s;
+    transform: rotate(135deg);
 }
 
 #music {
@@ -406,13 +471,28 @@ div.dodger.flash {
 
 @-webkit-keyframes fly {
     0% {
-        left: 0;
+        left: 0%;
     }
     50% {
         left: 100%;
     }
     100% {
         left: 110%
+    }
+}
+
+@-webkit-keyframes fall {
+    0% {
+        top: -30%;
+        left: 5%
+    }
+    50% {
+        top: 50%;
+        left: 20%
+    }
+    100% {
+        top: 250%;
+        left: 35%
     }
 }
 
@@ -509,7 +589,6 @@ div.dodger.flash {
     animation: bounce 2s infinite, fly 10s infinite;
     content: url(images/koopa.png);
     animation-delay: 10s
-
 }
 
 @-webkit-keyframes bounce {
@@ -527,5 +606,17 @@ div.dodger.flash {
     }
     100% {
         bottom: 0;
+    }
+}
+
+@-webkit-keyframes diagonal {
+    0% {
+        top: 0px;
+    }
+    90% {
+        top: 800px;
+    }
+    100% {
+        bottom: 1800px;
     }
 }
