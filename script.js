@@ -4,10 +4,6 @@
 //index.html landing - troll msgs
 const messageIndex = document.querySelector('.messageIndex')
 
-const umbrella = document.querySelector('.umbrella')
-umbrella.style.left = Math.random() * 300 + "px";
-
-
 function disableScroll() {
   if (window.addEventListener) // older FF
   { window.addEventListener('DOMMouseScroll', preventDefault, false); }
@@ -17,9 +13,7 @@ function disableScroll() {
   window.ontouchmove = preventDefault; // mobile
   document.onkeydown = preventDefaultForScrollKeys;
 }
-disableScroll();
-
-
+disableScroll()
 
 setTimeout(() => { messageIndex.innerHTML = 'hurry, before the music ends' }, 4000)
 setTimeout(() => { messageIndex.innerHTML = "show everyone you're not a n00b" }, 8000)
@@ -168,15 +162,7 @@ function preventDefaultForScrollKeys(e) {
   }
 }
 
-function disableScroll() {
-  if (window.addEventListener) // older FF
-  { window.addEventListener('DOMMouseScroll', preventDefault, false); }
-  document.addEventListener('wheel', preventDefault, { passive: false }); // Disable scrolling in Chrome
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove = preventDefault; // mobile
-  document.onkeydown = preventDefaultForScrollKeys;
-}
+
 disableScroll();
 
 
