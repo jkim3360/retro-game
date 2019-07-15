@@ -1,6 +1,6 @@
-/* index.html */
-
 /* eslint-disable */
+
+/* index.html */
 
 .umbrella {
     position: absolute;
@@ -58,7 +58,7 @@
     flex-direction: row;
 }
 
-#nameInput {
+#nameInputForm {
     display: flex;
     flex-direction: column;
     border-radius: 5%;
@@ -205,20 +205,66 @@ h1 {
     background: transparent;
 }
 
-progress {
+#highscorelistparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightcyan;
+    font-size: 18px;
+    border: 12px solid white;
+    height: 175px;
+    border-radius: 20%;
+    position: absolute;
+    margin: 0 auto;
+    top: 14%;
+    width: 400px;
+    line-height: 40px;
+    z-index: 1;
+}
+
+#highscorelist {
+    text-align: left;
+    font-size: 22px;
+    margin: 0 auto;
+    /* list-style: none; */
+}
+
+/* progress {
     display: flex;
     position: absolute;
     width: 25%;
     left: 4.2%;
     top: 4%;
 }
+ */
 
-progress[value] {
+progress {
+    height: 14px;
+    display: flex;
+    position: absolute;
+    width: 25%;
+    left: 4.2%;
+    top: 4%;
+    /* Important Thing */
     -webkit-appearance: none;
-    appearance: none;
-    border: 1px solid white;
-    width: 250px;
-    height: 20px;
+    border: none;
+}
+
+/* All good till now. Now we'll style the background */
+
+progress::-webkit-progress-bar {
+    background: white;
+    border-radius: 50px;
+    padding: 0px;
+    box-shadow: 0px 0px 1px 1px black;
+}
+
+/* Now the value part */
+
+progress::-webkit-progress-value {
+    border-radius: 50px;
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+    background: lightcoral;
 }
 
 .cloud {
@@ -236,9 +282,7 @@ progress[value] {
     z-index: 0;
     height: 3%;
     position: absolute;
-    -webkit-animation: linear infinite;
-    -webkit-animation-name: fly;
-    -webkit-animation-duration: 16s;
+    -webkit-animation: fly 50s linear infinite;
 }
 
 .two {
@@ -246,9 +290,7 @@ progress[value] {
     left: -50px;
     z-index: 0;
     position: absolute;
-    -webkit-animation: linear infinite;
-    -webkit-animation-name: fly;
-    -webkit-animation-duration: 13s;
+    -webkit-animation: fly 15s linear infinite;
 }
 
 .three {
@@ -267,7 +309,7 @@ progress[value] {
     left: -50px;
     z-index: 1;
     height: 18%;
-    -webkit-animation: fly 6s linear infinite;
+    -webkit-animation: fly 9s linear infinite;
     /* -webkit-animation-delay: 2s; */
     -webkit-animation: fly 6s linear infinite;
     -webkit-animation: fly 6s linear infinite;
@@ -295,6 +337,17 @@ progress[value] {
     -webkit-animation-duration: fly 70s linear infinite;
 }
 
+.eight {
+    top: 400px;
+    left: -50px;
+    height: 1%;
+    z-index: 0;
+    position: absolute;
+    -webkit-animation: fly 110s linear infinite;
+    -webkit-animation-name: fly 110s linear infinite;
+    -webkit-animation-duration: fly 80s linear infinite;
+}
+
 .seven {
     position: absolute;
     right: 180px;
@@ -311,13 +364,20 @@ h1 {
 
 .h1index {
     border: 8px solid lightgoldenrodyellow;
-    border-radius: 30%;
+    border-radius: 30px;
     padding: 20px;
-    margin: 20;
+    /* margin: ; */
     text-align: center;
     position: relative;
     z-index: 1;
     background: #BAFFE0
+}
+
+#highscorelist {
+    /* margin: ; */
+    text-align: center;
+    position: absolute;
+    z-index: 1;
 }
 
 div.dodger {
@@ -390,13 +450,26 @@ div.dodger.flash {
     left: -115px;
     height: 15%;
     content: url(images/sword.png);
-    -webkit-animation: fly 3s ease-in-out infinite;
-    -moz-animation: fly 3s ease-in-out infinite;
-    animation: fly 3s ease-in-out infinite;
+    -webkit-animation: fly 3s linear infinite;
+    -moz-animation: fly 3s linear infinite;
+    animation: fly 3s linear infinite;
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
     animation-delay: 2s;
     transform: rotate(135deg);
+}
+
+.yellowstar {
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    height: 75px;
+    content: url(images/yellowstar.png);
+    z-index: 2;
+    /* -webkit-animation: fly 3s linear infinite, spin .2s linear infinite;
+    -moz-animation: fly 3s linear infinite, spin .2s linear infinite;
+    animation: fly 3s linear infinite, spin .2s linear infinite, diagonal 2.2s linear infinite;
+    animation-delay: 2s; */
 }
 
 #music {
@@ -471,13 +544,13 @@ div.dodger.flash {
 
 @-webkit-keyframes fly {
     0% {
-        left: 0%;
+        left: -20%;
     }
     50% {
         left: 100%;
     }
     100% {
-        left: 110%
+        left: 120%
     }
 }
 
@@ -589,6 +662,18 @@ div.dodger.flash {
     animation: bounce 2s infinite, fly 10s infinite;
     content: url(images/koopa.png);
     animation-delay: 10s
+}
+
+.goku {
+    content: url(images/goku.gif);
+    position: absolute;
+    top: 450px;
+    left: -100px;
+    height: 8%;
+    z-index: 0;
+    -webkit-animation: fly 4s linear 15s 1;
+    -webkit-animation-name: fly 4s linear 15s 1;
+    -webkit-animation-duration: fly 4s linear 15s 1;
 }
 
 @-webkit-keyframes bounce {
