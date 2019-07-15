@@ -10,13 +10,13 @@
 </head>
 
 <body class="landing">
-    <img class="umbrella" src="images/umbrella.gif">
+  <img class="umbrella" src="images/umbrella.gif">
   <div class="sky index">
 
     <span id="messageBoxIndex">
       <div class="messageIndex">u ready to play?</div>
     </span>
-    
+
     <img class="magus" src="images/magus.gif">
     <!-- image source: http://rebloggy.com/post/pikachu-pokemon-cute-kawaii-pixel-art-pixel/31763721971 -->
     <img class="cloud five" src="images/cloud.png">
@@ -31,12 +31,14 @@
       <div id="arrow">></div><a class="button" href="main.html">Play</a>
 
     </div>
-    <form id="nameInput">
-      <input type="text" placeholder="Name" required />
+    <form id="nameInputForm">
+      <input id="nameInput" type="text" placeholder="Name" required />
     </form>
+    <button id="button" type="button">Submit</button>
+    <a id='mainpage' href="main.html"></a>
     <embed id="music" src="sounds/ff-prelude.mp3" autostart="true">
   </div>
-  <script src="script.js"></script>
+  <script src="script-index.js"></script>
 </body>
 
 </html>

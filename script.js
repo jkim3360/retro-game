@@ -1,12 +1,6 @@
+
 /* eslint-disable */
-
-
-//index.html landing - troll msgs
-const messageIndex = document.querySelector('.messageIndex')
-
-const umbrella = document.querySelector('.umbrella')
-umbrella.style.left = Math.random() * 300 + "px";
-
+//---------------index.html landing - troll msgs---------------
 
 function disableScroll() {
   if (window.addEventListener) // older FF
@@ -17,24 +11,12 @@ function disableScroll() {
   window.ontouchmove = preventDefault; // mobile
   document.onkeydown = preventDefaultForScrollKeys;
 }
-disableScroll();
+disableScroll()
 
-
-
-setTimeout(() => { messageIndex.innerHTML = 'hurry, before the music ends' }, 4000)
-setTimeout(() => { messageIndex.innerHTML = "show everyone you're not a n00b" }, 8000)
-setTimeout(() => { messageIndex.innerHTML = 'if u dunno wat a n00b is' }, 12000)
-setTimeout(() => { messageIndex.innerHTML = "it's because ur a n00b" }, 16000)
-setTimeout(() => { messageIndex.innerHTML = "lol" }, 18000)
-setTimeout(() => { messageIndex.innerHTML = "lawl" }, 20000)
-setTimeout(() => { messageIndex.innerHTML = "LOL" }, 22000)
-setTimeout(() => { messageIndex.innerHTML = "aite" }, 24000)
-setTimeout(() => { messageIndex.innerHTML = "just kidding" }, 27000)
-setTimeout(() => { messageIndex.innerHTML = "u can do it" }, 30000)
-setTimeout(() => { messageIndex.innerHTML = "let's go!!" }, 33000)
-
-//main.html
-const pikachu = document.querySelector('.pikachu')
+//---------------main.html---------------
+// global variables
+const body = document.body
+const goku = document.querySelector('.goku');
 const dodger = document.querySelector('.dodger');
 const star = document.querySelector('.star');
 let trump = document.querySelector('.trump');
@@ -42,74 +24,6 @@ const sword = document.querySelector('.sword');
 const sky = document.querySelector('.sky')
 const message = document.querySelector('.message')
 const heart = document.querySelector('.heart')
-
-
-
-
-
-
-
-
-
-
-
-
-// setInterval(function takeHeart() {
-//   // for (let i = 0; i < 1; i++) {
-
-//       let heart = document.querySelectorAll('.heart')
-//       const heartDiv = document.createElement('div')
-//       heartDiv.className = 'heart'
-//       document.querySelector('.sky').appendChild(heartDiv)
-//       heartDiv.style.top = Math.random() * window.innerHeight + "px";
-
-//       const dodgerStyles = window.getComputedStyle(dodger)
-
-
-
-//       const heartStyles = window.getComputedStyle(heartDiv)
-
-//       const heartTop = parseInt(heartStyles.top)
-//       const heartHeight = parseInt(heartStyles.height);
-//       const heartLeft = parseInt(heartStyles.left);
-//       const heartWidth = parseInt(heartStyles.width);
-
-//       if ((dodgerTop + dodgerHeight > heartTop) && (dodgerLeft + dodgerWidth > heartLeft)
-//       && (dodgerLeft < heartLeft + heartWidth) && (dodgerTop < heartTop + heartHeight)) {
-//       soundHit.play()
-//       health.value += 20;
-//       setTimeout(() => { dodger.classList.toggle('flash') }, 1000)
-//       dodger.classList.toggle('flash')
-//       setTimeout(() => { sky.removeChild(heartDiv) }, 15)
-//       intScore += 5
-//       setTimeout(() => { message.innerHTML = 'srsly? make America \n great again?' }, 100)
-//       setTimeout(() => { message.innerHTML = 'u noob' }, 3000)
-//       setTimeout(() => { message.innerHTML = "i don't even know" }, 3000)
-//     // }
-//   }
-//     // heartDiv.style.left = Math.random() * window.innerWidth + "px";
-//   }, 1000)
-
-
-
-// use this for fireballs
-
-// setInterval(function takeHeart() {
-//   for (let i = 0; i < 1; i++) {
-
-//       document.querySelector('.heart')
-//       const heartDiv = document.createElement('div')
-//       heartDiv.className = 'heart'
-//       document.querySelector('.sky').appendChild(heartDiv)
-//       heartDiv.style.top = Math.random() * window.innerHeight + "px";
-
-
-
-
-
-
-
-
 
 
 //Dodger movement
@@ -130,7 +44,6 @@ function animate() {
 }
 animate();
 
-
 //Move dodger using click
 document.addEventListener('click', (event) => {
   mouseX = event.pageX;
@@ -149,7 +62,6 @@ document.addEventListener('click', (event) => {
   turnLeft();
 });
 
-
 // Prevent default scrolling
 const keys = {
   37: 1, 38: 1, 39: 1, 40: 1,
@@ -167,20 +79,9 @@ function preventDefaultForScrollKeys(e) {
     return false;
   }
 }
-
-function disableScroll() {
-  if (window.addEventListener) // older FF
-  { window.addEventListener('DOMMouseScroll', preventDefault, false); }
-  document.addEventListener('wheel', preventDefault, { passive: false }); // Disable scrolling in Chrome
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove = preventDefault; // mobile
-  document.onkeydown = preventDefaultForScrollKeys;
-}
 disableScroll();
 
-
-//timer
+// Timer
 const startTimer = function (duration, display) {
   let timer = duration; let minutes; let
     seconds;
@@ -247,6 +148,10 @@ function Sound(src) {
 
 const soundHit = new Sound('sounds/spring.wav')
 //https://www.sounds-resource.com/snes/
+
+const soundHeart = new Sound('sounds/heartsound.mp3')
+
+
 // -----------------------------------------------------------------
 // function createHearts() {
 // const heartDiv = document.createElement('div')
@@ -262,33 +167,39 @@ let trumpStyles = window.getComputedStyle(trump)
 let swordStyles = window.getComputedStyle(sword)
 let starStyles = window.getComputedStyle(star)
 let heartStyles = window.getComputedStyle(heart)
-
-
-
-// DELETE THE FOLLOWING
-// dodger.style.top = "0px";
-// dodger.style.height = "100px";
-// sword.style.height = "-100px";
-// star.style.height = "75px"; 
-// star.style.top = "25px";
-// star.style.top = "60px";
-// star.style.height = "75px"; 
-// trump.style.height = "60px"
-
-
+let gokuStyles = window.getComputedStyle(goku)
 
 // Sprite positions
-
 trump.style.top = Math.random() * 600 + "px";
 setInterval(() => { sword.style.top = Math.random() * 650 + 'px'; }, 4000)
 heart.style.top = Math.random() * 600 + "px";
+goku.style.top = Math.random() * window.innerHeight + "px";
+setInterval(() => { }, 12000)
 // setInterval(() => { starStyles.left = Math.random() * 1000 + 'px'; }, 2250)
 
 
+function gameId() {
+  const gameId = document.createTextNode(localStorage.getItem('Game ID'))
+  const gameIdSign = document.createElement('div')
+  gameIdSign.appendChild(gameId)
+  sky.appendChild(gameIdSign)
+  gameIdSign.style.position = "absolute";
+  gameIdSign.style.left = "4.5%";
+  gameIdSign.style.fontSize = "21px";
+  gameIdSign.style.top = "18%";
+  gameIdSign.style.textShadow = "3px 3px #e0ffff"
+  gameIdSign.style.color = "#000000"
+  gameIdSign.style.margin = "0px"
+  gameIdSign.style.zIndex = "2"
+
+}
+gameId()
 
 
 //For every 33ms (about 30fps)
 const runGame = setInterval(function () {
+
+
   //Sprite dimensions and boundaries
 
   const dodgerTop = parseInt(dodgerStyles.top)
@@ -316,10 +227,6 @@ const runGame = setInterval(function () {
   const heartLeft = parseInt(heartStyles.left);
   const heartWidth = parseInt(heartStyles.width);
 
-
-
-
-
   // If character gets hit:
   if ((dodgerTop + dodgerHeight > trumpTop) && (dodgerLeft + dodgerWidth > trumpLeft)
     && (dodgerLeft < trumpLeft + trumpWidth) && (dodgerTop < trumpTop + trumpHeight)) {
@@ -332,12 +239,6 @@ const runGame = setInterval(function () {
     setTimeout(() => { message.innerHTML = 'srsly? make America \n great again?' }, 100)
     setTimeout(() => { message.innerHTML = 'u noob' }, 3000)
     setTimeout(() => { message.innerHTML = "i don't even know" }, 3000)
-    // setTimeout(function () {
-    // let newTrump = document.createElement('div')
-    // newTrump.className = 'trump'
-    // sky.appendChild(newTrump)
-    // newTrump = trump
-    // }, 2000)
   }
 
   if ((dodgerTop + dodgerHeight > swordTop) && (dodgerLeft + dodgerWidth > swordLeft)
@@ -346,13 +247,12 @@ const runGame = setInterval(function () {
     health.value -= 35
     setTimeout(() => { dodger.classList.toggle('flash') }, 200)
     dodger.classList.toggle('flash')
-    // setTimeout(() => { sky.removeChild(sword) }, 5)
     intScore -= 5
     setTimeout(() => { message.innerHTML = 'dude, your score..' }, 100)
     setTimeout(() => { message.innerHTML = "u noob" }, 4000)
     sword.classList.toggle('sword')
-  setTimeout(()=> {sword.classList.toggle('sword')},1000)
-  setInterval(() => { sword.style.top = Math.random() * 650 + 'px'; }, 5000)
+    setTimeout(() => { sword.classList.toggle('sword') }, 1000)
+    setInterval(() => { sword.style.top = Math.random() * 650 + 'px'; }, 5000)
   }
 
   if ((dodgerTop + dodgerHeight > starTop) && (dodgerLeft + dodgerWidth > starLeft)
@@ -361,36 +261,32 @@ const runGame = setInterval(function () {
     health.value -= 20
     setTimeout(() => { dodger.classList.toggle('flash') }, 1000)
     dodger.classList.toggle('flash')
-    // setTimeout(() => { sky.removeChild(star) }, 15)
     intScore -= 5
-    setTimeout(() => { message.innerHTML = "your skillz are basic" }, 100)
-  star.classList.toggle('star')
-  setTimeout(()=> {star.classList.toggle('star')},1000)
-  star.style.top = Math.random() * 1400 + 'px';
+    setTimeout(() => { message.innerHTML = "ur skillz are basic" }, 100)
+    star.classList.toggle('star')
+    setTimeout(() => { star.classList.toggle('star') }, 1000)
+    star.style.top = Math.random() * 1400 + 'px';
+  }
+
+  function createHeart() {
+    if ((dodgerTop + dodgerHeight > heartTop) && (dodgerLeft + dodgerWidth > heartLeft)
+      && (dodgerLeft < heartLeft + heartWidth) && (dodgerTop < heartTop + heartHeight)) {
+      soundHeart.play()
+      health.value += 20
+      intScore += 20
+      heart.classList.toggle('heart')
+      setTimeout(() => { heart.classList.toggle('heart') }, 3000)
+      heart.style.top = Math.random() * 600 + 'px';
     }
+  }
+  createHeart()
 
 
-function createHeart() {
-  if ((dodgerTop + dodgerHeight > heartTop) && (dodgerLeft + dodgerWidth > heartLeft)
-    && (dodgerLeft < heartLeft + heartWidth) && (dodgerTop < heartTop + heartHeight)) {
-    soundHit.play()
-    health.value += 20
-    intScore += 20
-    heart.classList.toggle('heart')
-    setTimeout(()=> {heart.classList.toggle('heart')},1000)
-    heart.style.top = Math.random() * 600 + 'px';
-    }}
-createHeart()
 
-  // const newHeartTop = parseInt(newHeartStyles.top)
-  // const newHeartHeight = parseInt(newHeartStyles.height);
-  // const newHeartLeft = parseInt(newHeartStyles.left);
-  // const newHeartWidth = parseInt(newHeartStyles.width);
 
- 
-  // setInterval(function(){console.log(dodger.style.top)}, 250)
 
-  //Set the character's final position    
+
+  
 
   function position(element, elementTop, elementLeft, elementWidth, elementHeight) {
     element.style.top = elementTop + "px";
@@ -402,19 +298,19 @@ createHeart()
   position(dodger, dodgerTop, dodgerLeft, dodgerWidth, dodgerHeight)
 
 
-  if (health.value <= 0) {
-    alert('you lose')
+  if (health.value < 1) {
+    // alert('you lose')
+    localStorage.setItem('Score', intScore)
+    window.stop()
     clearInterval(runGame)
-    window.location.href = "index.html";
-    // window.stop();
-    // window.localStorage.setItem('Name', )
+    window.location.href = "highscore.html";
   }
 
-  localStorage.setItem('Name', 'Score')
-  localStorage.getItem('Name')
 
-},200);
 
+
+
+}, 200);
 
 
 
