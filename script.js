@@ -286,15 +286,7 @@ const runGame = setInterval(function () {
 
 
 
-  // const newHeartTop = parseInt(newHeartStyles.top)
-  // const newHeartHeight = parseInt(newHeartStyles.height);
-  // const newHeartLeft = parseInt(newHeartStyles.left);
-  // const newHeartWidth = parseInt(newHeartStyles.width);
-
-
-  // setInterval(function(){console.log(dodger.style.top)}, 250)
-
-  //Set the character's final position    
+  
 
   function position(element, elementTop, elementLeft, elementWidth, elementHeight) {
     element.style.top = elementTop + "px";
