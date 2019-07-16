@@ -43,7 +43,7 @@ The objective of this game is to survive the flight home without getting hit by 
 ## hearts regenerate your health and add to your score!
 ![title](/images/hearts.png)
 
-## avoid enemies to stay alive! your character fades for a moment when you are hit
+## avoid enemies to stay alive! your character fades for a moment when you are hit and you lose points!
 ![title](/images/playerhit.png)
 
 ## click the parachuting character to play again. click magus on the right to return to the home screen
