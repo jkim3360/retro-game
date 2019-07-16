@@ -15,14 +15,9 @@ Dodger, the mysterious, adorable, roly-poly-esque bundle of delight, is desperat
 **domain**: - https://jkim3360.github.io/retro-game/
 
 ## description and user story
--what is the project?
 This project required students to create a game website without using libraries in order for our basic web development skills to be stretched and tested.
-
--why this project for you?
 I believe this project is for me because it puts your mind in all kinds of situations ranging from basic collision detection to manipulating the DOM to flip a moving image in real-time by using conditionals. This project also made me want to add more features after MVP to faithfully emulate a retro game environemnt.
-
--how would a user (not you) approach this project if using it in the wild (i.e. how would a player play your game).
-Players would approach this game as a desktop version of a simple mobile game with one objetive- to survive. It 
+Players would approach this game as a desktop version of a simple mobile game with one objetive- to survive. It challenges the player's reflexes and distance estimation skills.
 
 ## technologies & packages
 ESLint, Vanilla JS, CSS, HTML
