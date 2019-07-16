@@ -13,7 +13,7 @@
                                                                      
 ```
 
-# retro Games
+# retro games
 I built a side-scrolling platformer in homage to a collection of video games that captivated the imaginations of young boys and girls of a special generation before the advent of life-devouring smartphones. This is a very simple game built by a two-week old developer, so please bear with any bugs. This game requires the player to dodge incoming objects lest you die. In the game, of course. 
 
 Dodger, the mysterious, adorable, roly-poly-esque bundle of delight, is desperate to get home after a long day at the office. His boss threw him under the bus by piling work on him last-minute and his herniated disc is acting up. Drat!
