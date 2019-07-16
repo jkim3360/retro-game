@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 /* index.html */
 
 .umbrella {
@@ -144,7 +142,7 @@ h1 {
     font-size: 22px;
     border: 12px solid white;
     height: 175px;
-    border-radius: 20%;
+    border-radius: 25px;
     position: absolute;
     margin: 0 auto;
     top: 72%;
@@ -158,10 +156,10 @@ h1 {
     justify-content: center;
     align-items: center;
     background: lightcyan;
-    font-size: 22px;
-    border: 5px solid white;
+    font-size: 20px;
+    border: 10px solid white;
     height: 200px;
-    border-radius: 25%;
+    border-radius: 25px;
     position: absolute;
     right: 7%;
     top: 3%;
@@ -212,9 +210,10 @@ h1 {
     background: lightcyan;
     font-size: 18px;
     border: 12px solid white;
-    height: 175px;
-    border-radius: 20%;
+    height: 375px;
+    border-radius: 25px;
     position: absolute;
+    padding: 20px;
     margin: 0 auto;
     top: 14%;
     width: 400px;
@@ -225,9 +224,13 @@ h1 {
 #highscorelist {
     text-align: left;
     font-size: 22px;
-    margin: 0 auto;
-    /* list-style: none; */
+    left: 70px;
+    /* margin: 0 auto; */
+    list-style: none;
+    animation: color-change .3s infinite;
 }
+
+
 
 /* progress {
     display: flex;
@@ -459,21 +462,54 @@ div.dodger.flash {
     transform: rotate(135deg);
 }
 
-.yellowstar {
+.fire {
     position: absolute;
-    top: 25px;
-    left: 100px;
-    height: 75px;
-    content: url(images/yellowstar.png);
-    z-index: 2;
-    /* -webkit-animation: fly 3s linear infinite, spin .2s linear infinite;
-    -moz-animation: fly 3s linear infinite, spin .2s linear infinite;
-    animation: fly 3s linear infinite, spin .2s linear infinite, diagonal 2.2s linear infinite;
-    animation-delay: 2s; */
+    /* top: -100px; */
+    left: 600px;
+    height: 100px;
+    width: 70px;
+    content: url(images/firedrop.gif);
+    -webkit-animation: drop 6s linear infinite, driftright 3s linear infinite;
+    /* animation-delay: 5s; */
 }
 
-#music {
+.fire2 {
+    left: 200px;
+}
+
+.fire3 {
+    left: 900px;
+}
+
+.wily {
+    position: fixed;
+    left: -350px;
+    bottom: -25px;
+    height: 400px;
+    width: 400px;
+    animation: bounce 5s infinite, fly 20s infinite;
+    content: url(images/drwily.gif);
+    animation-delay: 20s;
+}
+
+.goku {
+    content: url(images/goku.gif);
+    position: absolute;
+    top: 450px;
+    left: -100px;
+    height: 8%;
+    z-index: 0;
+    -webkit-animation: fly 4s linear 15s 1;
+    -webkit-animation-name: fly 4s linear 15s 1;
+    -webkit-animation-duration: fly 4s linear 15s 1;
+}
+
+.music {
     visibility: hidden;
+}
+
+#lavostheme {
+    content: url('sounds/lavostheme.mp3')
 }
 
 @keyframes blink {
@@ -542,7 +578,7 @@ div.dodger.flash {
     }
 }
 
-@-webkit-keyframes fly {
+@keyframes fly {
     0% {
         left: -20%;
     }
@@ -551,6 +587,30 @@ div.dodger.flash {
     }
     100% {
         left: 120%
+    }
+}
+
+@keyframes drop {
+    0% {
+        top: 0%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes driftright {
+    0% {
+        left: 0%
+    }
+    50% {
+        left: 50%
+    }
+    100% {
+        left: 100%
     }
 }
 
@@ -650,47 +710,36 @@ div.dodger.flash {
     }
 }
 
-.koopa {
-    position: fixed;
-    left: -200px;
-    bottom: px;
-    margin-top: -25px;
-    margin-left: -25px;
-    height: 150px;
-    width: 150px;
-    /* background:red; */
-    animation: bounce 2s infinite, fly 10s infinite;
-    content: url(images/koopa.png);
-    animation-delay: 10s
-}
-
-.goku {
-    content: url(images/goku.gif);
-    position: absolute;
-    top: 450px;
-    left: -100px;
-    height: 8%;
-    z-index: 0;
-    -webkit-animation: fly 4s linear 15s 1;
-    -webkit-animation-name: fly 4s linear 15s 1;
-    -webkit-animation-duration: fly 4s linear 15s 1;
+@keyframes lightning {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 50%
+    }
 }
 
 @-webkit-keyframes bounce {
     0% {
         bottom: 5px;
     }
-    40%, 60% {
-        bottom: 12px;
+    20% {
+        bottom: 75px;
     }
-    20%, 80% {
-        bottom: 16px;
+    40% {
+        bottom: 300px;
     }
     50% {
-        bottom: 25%;
+        bottom:450px;
+    }
+    60% {
+        bottom: -20px;
+    }
+    80%{ 
+        bottom: 400px;
     }
     100% {
-        bottom: 0;
+        bottom: 5px;
     }
 }
 
