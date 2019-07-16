@@ -185,8 +185,6 @@ setInterval(() => { sword.style.top = `${Math.random() * 650}px`; }, 4000);
 heart.style.top = `${Math.random() * 600}px`;
 goku.style.top = `${Math.random() * window.innerHeight}px`;
 setInterval(() => { }, 12000);
-// wily.style.top = `${Math.random() * window.innerHeight}px`;
-// setInterval(() => { starStyles.left = Math.random() * 1000 + 'px'; }, 2250)
 
 // For every 33ms (about 30fps)
 const runGame = setInterval(() => {
