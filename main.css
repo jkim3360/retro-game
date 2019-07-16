@@ -62,15 +62,27 @@
 .button {
     display: flex;
     flex-direction: row;
-    /* align-content: center; */
     justify-content: center;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.25rem;
     color: white;
     padding: 10px;
-    letter-spacing: 3px;
-    height: 40;
+    height: 55px;
     width: 200px;
+    text-decoration: none;
+}
+
+#button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    border-radius: 12px;
+    border: 2px solid white;
+    color: white;
+    height: 30px;
+    width: 100px;
+    margin: 10px;
+    text-decoration: none;
+    background: #141852;
 }
 
 #playButton {
@@ -88,11 +100,7 @@
     z-index: 1;
     padding: 2;
     border: 8px solid white;
-    /* -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
-    /* -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
-    /* box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
-    /* background: rgba(255, 255, 255, 0.3); */
-    /* margin: 0 0 10px 0; */
+
 }
 
 #nameInput {
@@ -102,15 +110,9 @@
     z-index: 1;
     padding: 1px;
     border: 5px solid white;
-    /* -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
-    /* -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
-    /* box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
-    /* background: rgba(255, 255, 255, 0.3); */
-    /* margin: 0 0 10px 0; */
 }
 
 ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
     font-family: 'Press Start 2P', cursive;
     color: rgba(0, 0, 0, .2);
 }
@@ -140,13 +142,13 @@ input:focus, select:focus, textarea:focus, button:focus {
 .landing {
     background: #070B34 url(images/snow.gif);
     z-index: 1;
+    
 }
 
 body {
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
     line-height: 3;
-    /* overflow-x: hidden; */
 }
 
 #bodymain {
@@ -154,7 +156,6 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
     line-height: 3;
-    /* overflow-x: hidden; */
 }
 
 a {
@@ -196,6 +197,7 @@ h1 {
     justify-content: center;
     align-items: center;
     background: url(images/snow.gif);
+    background-repeat: no-repeat;
     z-index: 0;
     min-height: 100%;
 }
@@ -204,7 +206,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: lightcyan;
+    background: #141852;
     font-size: 22px;
     border: 12px solid white;
     height: 150px;
@@ -215,6 +217,7 @@ h1 {
     width: 20%;
     padding: 5px;
     line-height: 40px;
+    color: white;
     z-index: 1;
 }
 
@@ -273,7 +276,6 @@ h1 {
 #highscorelistparent {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     background: lightcyan;
     font-size: 15px;
     border: 12px solid white;
@@ -281,30 +283,17 @@ h1 {
     border-radius: 25px;
     position: absolute;
     padding: 20px;
-    /* margin: 0 auto; */
-    /* top: 14%; */
+
     width: 400px;
     line-height: 40px;
     z-index: 1;
 }
 
 #highscorelist {
-    /* text-align: left; */
     font-size: 22px;
     left: 55px;
-    /* margin: 0 auto; */
-    /* list-style: none; */
     animation: color-change .3s infinite;
 }
-
-/* progress {
-    display: flex;
-    position: absolute;
-    width: 25%;
-    left: 4.2%;
-    top: 4%;
-}
- */
 
 progress {
     height: 14px;
@@ -313,12 +302,9 @@ progress {
     width: 25%;
     left: 4.2%;
     top: 4%;
-    /* Important Thing */
     -webkit-appearance: none;
     border: none;
 }
-
-/* All good till now. Now we'll style the background */
 
 progress::-webkit-progress-bar {
     background: white;
@@ -326,8 +312,6 @@ progress::-webkit-progress-bar {
     padding: 0px;
     box-shadow: 0px 0px 1px 1px black;
 }
-
-/* Now the value part */
 
 progress::-webkit-progress-value {
     border-radius: 50px;
@@ -350,6 +334,7 @@ progress::-webkit-progress-value {
     z-index: 0;
     height: 3%;
     position: absolute;
+    animation: fly 50s linear infinite;
     -webkit-animation: fly 50s linear infinite;
 }
 
@@ -369,7 +354,6 @@ progress::-webkit-progress-value {
     position: absolute;
     z-index: 2;
     animation: fly 3s linear infinite;
-    /* -webkit-animation-name: fly 3s linear infinite; */
 }
 
 .four {
@@ -378,7 +362,6 @@ progress::-webkit-progress-value {
     z-index: 1;
     height: 18%;
     -webkit-animation: fly 9s linear infinite;
-    /* -webkit-animation-delay: 2s; */
     animation: fly 6s linear infinite;
 }
 
@@ -437,14 +420,14 @@ h1 {
 }
 
 .h1index {
-    border: 8px solid lightgoldenrodyellow;
+    border: 10px solid white;
     border-radius: 30px;
     padding: 20px;
     /* margin: ; */
     text-align: center;
     position: relative;
     z-index: 1;
-    background: lightcyan;
+    background: #141852;
 }
 
 #highscorelist {
@@ -461,7 +444,6 @@ div.dodger {
 div.dodger.image {
     top: 100px;
     left: 0px;
-    /* border: none; */
     width: 125px;
     height: 125px;
     position: absolute;
@@ -471,7 +453,6 @@ div.dodger.image {
 }
 
 div.dodger.right {
-    /* size: 25%; */
     content: url(images/kirby-flying-right.gif);
 }
 
@@ -487,7 +468,6 @@ div.dodger.flash {
     content: url(images/heart.png);
     height: 5%;
     animation: spin 2s reverse 1s infinite, fly 7s linear 10s 1;
-    /* animation-delay: 5s; */
 }
 
 .star {
@@ -510,12 +490,9 @@ div.dodger.flash {
     height: 60px;
     content: url(images/trumpwall.png);
     -webkit-animation: fly 10s linear infinite;
-    /* spin 6s linear infinite; */
     -moz-animation: fly 10s linear infinite;
-    /* spin 6s linear infinite; */
-    animation: fly 10s linear infinite, /* spin 6s linear infinite; */
-    ;
-    animation-delay: 1s
+    animation: fly 10s linear infinite;
+    animation-delay: 1s;
 }
 
 .sword {
@@ -535,14 +512,12 @@ div.dodger.flash {
 
 .fire {
     position: absolute;
-    /* top: -100px; */
     left: 600px;
     height: 100px;
     width: 70px;
     content: url(images/firedrop.gif);
     -webkit-animation: drop 6s linear infinite, driftright 3s linear infinite;
     animation: drop 6s linear infinite, driftright 3s linear infinite;
-    /* animation-delay: 5s; */
     transform: rotate(305deg);
 }
 
@@ -584,9 +559,7 @@ div.dodger.flash {
     left: -100px;
     height: 8%;
     z-index: 0;
-    -webkit-animation: fly 4s linear 15s 1;
-    -webkit-animation-name: fly 4s linear 15s 1;
-    -webkit-animation-duration: fly 4s linear 15s 1;
+    animation: fly 4s linear 15s 1;
 }
 
 .music {
@@ -600,6 +573,18 @@ div.dodger.flash {
 @keyframes blink {
     50% {
         opacity: 0;
+    }
+}
+
+@keyframes color-change2 {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: darkred;
+    }
+    100% {
+        color: orange;
     }
 }
 
@@ -624,6 +609,18 @@ div.dodger.flash {
     }
     100% {
         color: orange;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: rgb(3, 3, 116);
+    }
+    50% {
+        color: lightcoral;
+    }
+    100% {
+        color: yellow;
     }
 }
 
@@ -660,18 +657,6 @@ div.dodger.flash {
     }
     100% {
         color: orange;
-    }
-}
-
-@keyframes color-change {
-    0% {
-        color: rgb(3, 3, 116);
-    }
-    50% {
-        color: lightcoral;
-    }
-    100% {
-        color: yellow;
     }
 }
 
@@ -828,6 +813,30 @@ div.dodger.flash {
     }
 }
 
+@keyframes bounce {
+    0% {
+        bottom: 5px;
+    }
+    20% {
+        bottom: 75px;
+    }
+    40% {
+        bottom: 300px;
+    }
+    50% {
+        bottom: 450px;
+    }
+    60% {
+        bottom: -20px;
+    }
+    80% {
+        bottom: 400px;
+    }
+    100% {
+        bottom: 5px;
+    }
+}
+
 @-webkit-keyframes bounce {
     0% {
         bottom: 5px;
@@ -849,6 +858,42 @@ div.dodger.flash {
     }
     100% {
         bottom: 5px;
+    }
+}
+
+@keyframes oscillate {
+    0% {
+        bottom: 0px;
+    }
+    10% {
+        bottom: 150px;
+    }
+    20% {
+        bottom: 300px;
+    }
+    30% {
+        bottom: 450px;
+    }
+    40% {
+        bottom: 600px;
+    }
+    50% {
+        bottom: 650px;
+    }
+    60% {
+        bottom: 600px;
+    }
+    60% {
+        bottom: 450px;
+    }
+    80% {
+        bottom: 300px;
+    }
+    90% {
+        bottom: 150px;
+    }
+    100% {
+        bottom: 0px;
     }
 }
 
@@ -885,6 +930,18 @@ div.dodger.flash {
     }
     100% {
         bottom: 0px;
+    }
+}
+
+@keyframes diagonal {
+    0% {
+        top: 0px;
+    }
+    90% {
+        top: 800px;
+    }
+    100% {
+        bottom: 1800px;
     }
 }
 

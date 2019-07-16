@@ -246,7 +246,6 @@ const runGame = setInterval(() => {
     setTimeout(() => { sky.removeChild(trump); }, 15);
     intScore -= 5;
     setTimeout(() => { message.innerHTML = 'srsly? make America \n great again?'; }, 100);
-    setTimeout(() => { message.innerHTML = 'u noob'; }, 3000);
     setTimeout(() => { message.innerHTML = "i don't even know"; }, 3000);
   }
 
@@ -330,9 +329,7 @@ const runGame = setInterval(() => {
   position(dodger, dodgerTop, dodgerLeft, dodgerWidth, dodgerHeight);
 
   if (health.value < 1) {
-    // alert('you lose')
     localStorage.setItem('Score', intScore);
-    window.stop();
     setTimeout(() => { message.innerHTML = "you died!"; }, 100)
     setTimeout(() => { window.location.href = 'highscore.html'; }, 3000)
   }
