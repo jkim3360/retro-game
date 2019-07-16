@@ -1,4 +1,4 @@
-Retro Gamer (title not finalized)         
+Retro Games   
 ```
                    ____      _                ____                           
                   |  _ \ ___| |_ _ __ ___    / ___| __ _ _ __ ___   ___  ___ 
