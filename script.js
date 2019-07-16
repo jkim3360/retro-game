@@ -32,7 +32,7 @@ let mouseX = 150;
 let mouseY = 250;
 let dodgerX = 0;
 let dodgerY = 0;
-const vel = 1;
+const vel = .9;
 
 function animate() {
   const distX = mouseX - dodgerX;
@@ -275,7 +275,7 @@ const runGame = setInterval(() => {
   setTimeout(() => { dodger.classList.toggle('flash'); }, 1000);
   dodger.classList.toggle('flash');
   intScore -= 5;
-  setTimeout(() => { message.innerHTML = 'ur skillz are basic'; }, 100);
+  setTimeout(() => { message.innerHTML = 'aloe'; }, 100);
   }
 
   if ((dodgerTop + dodgerHeight > wilyTop) && (dodgerLeft + dodgerWidth > wilyLeft)
@@ -285,7 +285,8 @@ const runGame = setInterval(() => {
   setTimeout(() => { dodger.classList.toggle('flash'); }, 1000);
   dodger.classList.toggle('flash');
   intScore -= 5;
-  setTimeout(() => { message.innerHTML = 'ur skillz are basic'; }, 100);
+  setTimeout(() => { message.innerHTML = "if you type 'cheat codes' you automatically win"; }, 100);
+  setTimeout(() => { message.innerHTML = "if you type 'cheat codes' you automatically win"; }, 2000);
   star.classList.toggle('star');
   setTimeout(() => { star.classList.toggle('star'); }, 1000);
   star.style.top = `${Math.random() * 1400}px`;
@@ -317,7 +318,8 @@ const runGame = setInterval(() => {
     // alert('you lose')
     localStorage.setItem('Score', intScore);
     window.stop();
-    clearInterval(runGame);
-    window.location.href = 'highscore.html';
+    message.innerHTML = "you died!";
+    setTimeout(() => {window.location.href = 'highscore.html';}, 2000)
   }
 }, 200);
+

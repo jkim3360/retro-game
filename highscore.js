@@ -39,3 +39,8 @@ function highScore() {
     highScoreList.appendChild(listItem)
 }
 highScore()
+
+const kirby = document.querySelector('.umbrella')
+kirby.addEventListener('click', function() {
+    window.location.href = 'main.html'
+})
