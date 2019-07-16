@@ -1,11 +1,6 @@
 Retro Gamer (title not finalized)
-(Select raw to see ASCII text signature)
-   __      _                 ___                          
-  /__\ ___| |_ _ __ ___     / _ \__ _ _ __ ___   ___ _ __ 
- / \/// _ \ __| '__/ _ \   / /_\/ _` | '_ ` _ \ / _ \ '__|
-/ _  \  __/ |_| | | (_) | / /_\\ (_| | | | | | |  __/ |   
-\/ \_/\___|\__|_|  \___/  \____/\__,_|_| |_| |_|\___|_|   
-                                                          
+(Select raw to view ASCII text signature)          
+
 
 I plan to build a platformer side-scrolling game that requires the user to dodge incoming objects. Firby, the mysterious pink round creature, is desperate to get home after a long day at the office. His boss threw him under the bus by piling work on him last-minute and his herniated disc is acting up. Drat! 
 
