@@ -278,33 +278,33 @@ const runGame = setInterval(() => {
   }
 
   if ((dodgerTop + dodgerHeight > fireTop) && (dodgerLeft + dodgerWidth > fireLeft)
-  && (dodgerLeft < fireLeft + fireWidth) && (dodgerTop < fireTop + fireHeight)) {
-  soundHit.play();
-  health.value -= 5  
-  setTimeout(() => { dodger.classList.toggle('flash'); }, 1000);
-  dodger.classList.toggle('flash');
-  intScore -= 5;
-  setTimeout(() => { message.innerHTML = 'aloe'; }, 100);
+    && (dodgerLeft < fireLeft + fireWidth) && (dodgerTop < fireTop + fireHeight)) {
+    soundHit.play();
+    health.value -= 5
+    setTimeout(() => { dodger.classList.toggle('flash'); }, 1000);
+    dodger.classList.toggle('flash');
+    intScore -= 5;
+    setTimeout(() => { message.innerHTML = 'aloe'; }, 100);
   }
 
   if ((dodgerTop + dodgerHeight > wilyTop) && (dodgerLeft + dodgerWidth > wilyLeft)
-  && (dodgerLeft < wilyLeft + wilyWidth) && (dodgerTop < wilyTop + wilyHeight)) {
-  soundHit.play();
-  health.value -= 10  
-  setTimeout(() => { dodger.classList.toggle('flash'); }, 1000);
-  dodger.classList.toggle('flash');
-  intScore -= 5;
-  setTimeout(() => { message.innerHTML = "if you type 'cheat codes' you automatically win"; }, 100);
+    && (dodgerLeft < wilyLeft + wilyWidth) && (dodgerTop < wilyTop + wilyHeight)) {
+    soundHit.play();
+    health.value -= 10
+    setTimeout(() => { dodger.classList.toggle('flash'); }, 1000);
+    dodger.classList.toggle('flash');
+    intScore -= 5;
+    setTimeout(() => { message.innerHTML = "if you type 'cheat codes' you automatically win"; }, 100);
   }
 
   if ((dodgerTop + dodgerHeight > cactuarTop) && (dodgerLeft + dodgerWidth > cactuarLeft)
-  && (dodgerLeft < cactuarLeft + cactuarWidth) && (dodgerTop < cactuarTop + cactuarHeight)) {
-  soundHit.play();
-  health.value -= 75  
-  setTimeout(() => { dodger.classList.toggle('flash'); }, 1000);
-  dodger.classList.toggle('flash');
-  intScore -= 10;
-  message.innerHTML = "you've been spiked by cactuar!";
+    && (dodgerLeft < cactuarLeft + cactuarWidth) && (dodgerTop < cactuarTop + cactuarHeight)) {
+    soundHit.play();
+    health.value -= 75
+    setTimeout(() => { dodger.classList.toggle('flash'); }, 1000);
+    dodger.classList.toggle('flash');
+    intScore -= 10;
+    message.innerHTML = "you've been spiked by cactuar!";
   }
 
   function createHeart() {
@@ -333,8 +333,8 @@ const runGame = setInterval(() => {
     // alert('you lose')
     localStorage.setItem('Score', intScore);
     window.stop();
-    setTimeout(() => {message.innerHTML = "you died!";}, 100)
-    setTimeout(() => {window.location.href = 'highscore.html';}, 3000)
+    setTimeout(() => { message.innerHTML = "you died!"; }, 100)
+    setTimeout(() => { window.location.href = 'highscore.html'; }, 3000)
   }
 }, 200);
 

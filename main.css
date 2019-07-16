@@ -57,7 +57,6 @@
     justify-content: center;
     align-content: center;
     margin: 0 auto;
-    
 }
 
 .button {
@@ -72,8 +71,6 @@
     letter-spacing: 3px;
     height: 40;
     width: 200px;
-
-    
 }
 
 #playButton {
@@ -99,36 +96,33 @@
 }
 
 #nameInput {
-   
     /* height: 200px; */
     font-family: 'Press Start 2P', cursive;
     border-radius: 5%;
     z-index: 1;
     padding: 1px;
     border: 5px solid white;
-    
     /* -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
     /* -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
     /* box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
     /* background: rgba(255, 255, 255, 0.3); */
     /* margin: 0 0 10px 0; */
 }
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    font-family: 'Press Start 2P', cursive;    
-    color: rgba(0, 0, 0, .2);
-  }
 
-  input[type="text"] {
-    font-family: 'Press Start 2P', cursive;    
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(0, 0, 0, .2);
+}
+
+input[type="text"] {
+    font-family: 'Press Start 2P', cursive;
     font-size: 14px;
     color: black;
     animation: color-change2 .4s infinite;
-  }
+}
 
-    input:focus,
-    select:focus,
-    textarea:focus,
-    button:focus {
+input:focus, select:focus, textarea:focus, button:focus {
     outline: none;
 }
 
@@ -139,22 +133,20 @@
     left: -1%;
     top: 26%;
     animation: flash 3s infinite;
-
 }
 
 /* main.html */
 
 .landing {
-    background:#070B34;
+    background: #070B34 url(images/snow.gif);
+    z-index: 1;
 }
 
 body {
-    background: url(images/snow.gif), repeat;
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
     line-height: 3;
     /* overflow-x: hidden; */
- 
 }
 
 #bodymain {
@@ -163,7 +155,6 @@ body {
     font-size: 15px;
     line-height: 3;
     /* overflow-x: hidden; */
- 
 }
 
 a {
@@ -195,15 +186,18 @@ h1 {
     height: 600px;
     width: 100%;
     margin: auto 0;
+    min-height: 100%;
 }
 
 .sky.index {
-    background: darkblue;
+    background: #070B34;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url(images/snow.gif);
+    z-index: 0;
+    min-height: 100%;
 }
 
 #messageBoxIndex {
@@ -303,8 +297,6 @@ h1 {
     animation: color-change .3s infinite;
 }
 
-
-
 /* progress {
     display: flex;
     position: absolute;
@@ -378,7 +370,6 @@ progress::-webkit-progress-value {
     z-index: 2;
     animation: fly 3s linear infinite;
     /* -webkit-animation-name: fly 3s linear infinite; */
-
 }
 
 .four {
@@ -421,6 +412,7 @@ progress::-webkit-progress-value {
     height: 13%;
     z-index: 0;
 }
+
 .eight {
     top: 400px;
     left: -50px;
@@ -436,7 +428,6 @@ progress::-webkit-progress-value {
     top: 150px;
     animation: fly 110s linear infinite;
     animation-delay: 4s;
-
 }
 
 h1 {
@@ -620,7 +611,7 @@ div.dodger.flash {
         color: darkred;
     }
     100% {
-        color:orange;
+        color: orange;
     }
 }
 
@@ -719,6 +710,7 @@ div.dodger.flash {
         left: 100%
     }
 }
+
 @keyframes driftleft {
     0% {
         right: 0%
@@ -847,12 +839,12 @@ div.dodger.flash {
         bottom: 300px;
     }
     50% {
-        bottom:450px;
+        bottom: 450px;
     }
     60% {
         bottom: -20px;
     }
-    80%{ 
+    80% {
         bottom: 400px;
     }
     100% {
@@ -885,10 +877,10 @@ div.dodger.flash {
     60% {
         bottom: 450px;
     }
-    80%{ 
+    80% {
         bottom: 300px;
     }
-    90%{ 
+    90% {
         bottom: 150px;
     }
     100% {
