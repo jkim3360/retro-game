@@ -7,9 +7,15 @@
 const messageIndex = document.querySelector('.messageIndex')
 const name = document.getElementById('nameInput')
 const btn = document.getElementById('button')
+const anonBtn = document.querySelector('#playButton')
 
 btn.addEventListener('click', function () {
   localStorage.setItem('Game ID', name.value)
+  window.location.href = "main.html"
+})
+
+anonBtn.addEventListener('click', function () {
+  localStorage.setItem('Game ID', 'Player 1')
   window.location.href = "main.html"
 })
 
@@ -51,7 +57,7 @@ function preventDefaultForScrollKeys(event) {
 }
 disableScroll();
 
-
+// index trash talk
 setTimeout(() => { messageIndex.innerHTML = 'hurry, before the music ends' }, 4000)
 setTimeout(() => { messageIndex.innerHTML = "show everyone you're not a n00b" }, 8000)
 setTimeout(() => { messageIndex.innerHTML = 'if u dunno wat a n00b is' }, 12000)

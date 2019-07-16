@@ -154,8 +154,8 @@ const soundHeart = new Sound('sounds/heartsound.mp3');
 
 
 //store name in local storage
-function gameId() {
-  const gameId = document.createTextNode(localStorage.getItem('Game ID'));
+function gameId() { 
+  let gameId = document.createTextNode(localStorage.getItem('Game ID'));
   const gameIdSign = document.createElement('div');
   gameIdSign.appendChild(gameId);
   sky.appendChild(gameIdSign);
@@ -167,6 +167,7 @@ function gameId() {
   gameIdSign.style.color = '#000000';
   gameIdSign.style.margin = '0px';
   gameIdSign.style.zIndex = '2';
+  
 }
 gameId();
 
