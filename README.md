@@ -16,27 +16,39 @@ Dodger, the mysterious, adorable, roly-poly-esque bundle of delight, is desperat
 
 ## description and user story
 This project required students to create a game website without using libraries in order for our basic web development skills to be stretched and tested.
-I believe this project is for me because it puts your mind in all kinds of situations ranging from basic collision detection to manipulating the DOM to flip a moving image in real-time by using conditionals. This project also made me want to add more features after MVP to faithfully emulate a retro game environemnt.
-Players would approach this game as a desktop version of a simple mobile game with one objetive- to survive. It challenges the player's reflexes and distance estimation skills.
+I believe this project is for me because it puts your mind in all kinds of situations ranging from basic collision detection to manipulating the DOM to flip a moving image in real-time through the use of conditionals. This project also made me want to add more features after MVP to faithfully emulate a retro, SNES-like game environemnt.
+Players can approach this game as a desktop version of a simple mobile game with one objective- to survive. It challenges the player's reflexes and distance estimation skills through the timer and incrementing score board.
 
 ## technologies & packages
-ESLint, Vanilla JS, CSS, HTML
+Vanilla JS, CSS, HTML, ESLint, Visual Studio Code, node.js
 
 ## major problems & solutions
-- Collision detection, discovering getComputedStyle to grab dimesions and figuring out the boundaries of each sprite
-- Player movement
+- Collision detection, discovering getComputedStyle to grab dimesions and establishing the boundaries of each sprite
+- Player movement. Original code for movement was a ```mouseover``` effect. This was changed to ```click``` a click event and the starting position of 
 
 ## MVP
-MVP includes title page, game page and gameover page. Also MVP has movings sprites, a stopwatch, score counter, health bar and message box.
+MVP includes title page, game page and gameover page. Also MVP has moving sprites, stopwatch, score counter, health bar and message box.
 
 Post MVP, I was able create a 'heart' sprite function that randomly spawned hearts which regenerate health. I was also able to add background music for each page, sound effects upon collision, name and score local storage input, and various pieces of styling.
 
--describe stretch goals, wips, next steps (this can be a separate heading if you want)
 Future goals for this project are to change music before a boss appears, have a screen flash upon collision with a boss, change character and add the ability to shoot projectiles.
 
 # how to play
 
 The objective of this game is to survive the flight home without getting hit by hostile objects such as absurd political rhetoric, a rogue Super Mario star, and the legendary Excalibur flying back home like Thor's hammer. Use the mouse and click and move your character. This game is all about timing your click perfectly, because there is a slight lag in your character's movement. Watch out for the occasional hearts! They replenish your health bar, located at the top left of the window. The player who lasts longest wins!
+
+## enter your name and press enter or click anonymous
+![title](/images/title.png)
+
+## hearts regenerate your health and add to your score!
+![title](/images/hearts.png)
+
+## avoid enemies to stay alive! your character fades for a moment when you are hit
+![title](/images/playerhit.png)
+
+## click the parachuting character to play again. click magus on the right to return to the home screen
+![title](/images/gameover.png)
+
 
 ## _code snippet_
 
