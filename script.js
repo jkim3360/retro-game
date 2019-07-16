@@ -29,6 +29,25 @@ const wily = document.querySelector('.wily');
 const cactuar = document.querySelector('.cactuar');
 
 
+// Prevent default scrolling
+const keys = {
+  37: 1, 38: 1, 39: 1, 40: 1,
+};
+
+function preventDefault(event) {
+  event = window.event;
+  if (event.preventDefault) event.preventDefault();
+  e.returnValue = false;
+}
+
+function preventDefaultForScrollKeys(event) {
+  if (keys[event.keyCode]) {
+    preventDefault(event);
+    return false;
+  }
+}
+disableScroll();
+
 // Dodger movement
 let mouseX = 150;
 let mouseY = 250;
@@ -64,25 +83,6 @@ document.addEventListener('click', (event) => {
   }
   turnLeft();
 });
-
-// Prevent default scrolling
-const keys = {
-  37: 1, 38: 1, 39: 1, 40: 1,
-};
-
-function preventDefault(event) {
-  event = window.event;
-  if (event.preventDefault) event.preventDefault();
-  e.returnValue = false;
-}
-
-function preventDefaultForScrollKeys(event) {
-  if (keys[event.keyCode]) {
-    preventDefault(event);
-    return false;
-  }
-}
-disableScroll();
 
 // Timer
 const startTimer = function (duration, display) {
