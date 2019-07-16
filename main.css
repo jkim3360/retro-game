@@ -17,6 +17,30 @@
     z-index: 1;
 }
 
+.moon {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+    height: 10%;
+    z-index: -1;
+    animation: driftleft 240s linear infinite;
+    opacity: .6;
+}
+
+.shootingstar {
+    position: absolute;
+    left: 100px;
+    top: -50px;
+}
+
+.magusfront {
+    position: absolute;
+    right: 209px;
+    top: 195px;
+    height: 17%;
+    z-index: 1;
+}
+
 .sleep {
     position: relative;
     height: 27%;
@@ -33,22 +57,23 @@
     justify-content: center;
     align-content: center;
     margin: 0 auto;
+    
 }
 
 .button {
     display: flex;
     flex-direction: row;
+    /* align-content: center; */
     justify-content: center;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.25rem;
     color: white;
-    padding: 1rem 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: .8s linear infinite blink;
+    padding: 10px;
+    letter-spacing: 3px;
     height: 40;
     width: 200px;
-    padding: 20px;
+
+    
 }
 
 #playButton {
@@ -59,41 +84,86 @@
 #nameInputForm {
     display: flex;
     flex-direction: column;
-    border-radius: 5%;
+    border-radius: 25px;
     flex-wrap: wrap;
     height: 20px;
+    font-family: 'Press Start 2P', cursive;
     z-index: 1;
-    padding: 0;
+    padding: 2;
+    border: 8px solid white;
+    /* -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
+    /* -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
+    /* background: rgba(255, 255, 255, 0.3); */
+    /* margin: 0 0 10px 0; */
+}
+
+#nameInput {
+   
+    /* height: 200px; */
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 5%;
+    z-index: 1;
+    padding: 1px;
     border: 5px solid white;
-    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.3);
-    margin: 0 0 10px 0;
+    
+    /* -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
+    /* -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
+    /* background: rgba(255, 255, 255, 0.3); */
+    /* margin: 0 0 10px 0; */
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Press Start 2P', cursive;    
+    color: rgba(0, 0, 0, .2);
+  }
+
+  input[type="text"] {
+    font-family: 'Press Start 2P', cursive;    
+    font-size: 14px;
+    color: black;
+    animation: color-change2 .4s infinite;
+  }
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+    outline: none;
 }
 
 #arrow {
     color: white;
     size: 24px;
     position: relative;
-    left: 22%;
-    top: 28.5%;
+    left: -1%;
+    top: 26%;
+    animation: flash 3s infinite;
+
 }
 
 /* main.html */
 
 .landing {
-    background: skyblue;
+    background:#070B34;
 }
 
 body {
+    background: url(images/snow.gif), repeat;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    line-height: 3;
+    /* overflow-x: hidden; */
+ 
+}
+
+#bodymain {
     background: skyblue;
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
     line-height: 3;
-    overflow-x: hidden;
-    width: 100%;
-    height: 100%;
+    /* overflow-x: hidden; */
+ 
 }
 
 a {
@@ -128,10 +198,12 @@ h1 {
 }
 
 .sky.index {
+    background: darkblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url(images/snow.gif);
 }
 
 #messageBoxIndex {
@@ -141,12 +213,13 @@ h1 {
     background: lightcyan;
     font-size: 22px;
     border: 12px solid white;
-    height: 175px;
+    height: 150px;
     border-radius: 25px;
     position: absolute;
     margin: 0 auto;
     top: 72%;
     width: 20%;
+    padding: 5px;
     line-height: 40px;
     z-index: 1;
 }
@@ -206,27 +279,27 @@ h1 {
 #highscorelistparent {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background: lightcyan;
-    font-size: 18px;
+    font-size: 15px;
     border: 12px solid white;
-    height: 375px;
+    height: 300px;
     border-radius: 25px;
     position: absolute;
     padding: 20px;
-    margin: 0 auto;
-    top: 14%;
+    /* margin: 0 auto; */
+    /* top: 14%; */
     width: 400px;
     line-height: 40px;
     z-index: 1;
 }
 
 #highscorelist {
-    text-align: left;
+    /* text-align: left; */
     font-size: 22px;
-    left: 70px;
+    left: 55px;
     /* margin: 0 auto; */
-    list-style: none;
+    /* list-style: none; */
     animation: color-change .3s infinite;
 }
 
@@ -293,18 +366,19 @@ progress::-webkit-progress-value {
     left: -50px;
     z-index: 0;
     position: absolute;
+    animation: fly 15s linear infinite;
     -webkit-animation: fly 15s linear infinite;
 }
 
 .three {
     top: 400px;
-    left: -50px;
+    left: -100px;
     height: 30%;
     position: absolute;
     z-index: 2;
-    -webkit-animation: linear infinite;
-    -webkit-animation-name: fly;
-    -webkit-animation-duration: 3s;
+    animation: fly 3s linear infinite;
+    /* -webkit-animation-name: fly 3s linear infinite; */
+
 }
 
 .four {
@@ -314,8 +388,7 @@ progress::-webkit-progress-value {
     height: 18%;
     -webkit-animation: fly 9s linear infinite;
     /* -webkit-animation-delay: 2s; */
-    -webkit-animation: fly 6s linear infinite;
-    -webkit-animation: fly 6s linear infinite;
+    animation: fly 6s linear infinite;
 }
 
 .five {
@@ -323,10 +396,10 @@ progress::-webkit-progress-value {
     left: -50px;
     height: 15%;
     position: absolute;
+    opacity: .6;
     z-index: 0;
     -webkit-animation: fly 19s linear infinite;
-    -webkit-animation-name: fly 19s linear infinite;
-    -webkit-animation-duration: fly 19s linear infinite;
+    animation: fly 19s linear infinite;
 }
 
 .six {
@@ -334,12 +407,20 @@ progress::-webkit-progress-value {
     left: -50px;
     height: 5%;
     z-index: 0;
+    opacity: .8;
     position: absolute;
+    animation: fly 70s linear infinite;
     -webkit-animation: fly 70s linear infinite;
-    -webkit-animation-name: fly 70s linear infinite;
-    -webkit-animation-duration: fly 70s linear infinite;
 }
 
+.seven {
+    position: absolute;
+    right: 180px;
+    top: 270px;
+    opacity: .8;
+    height: 13%;
+    z-index: 0;
+}
 .eight {
     top: 400px;
     left: -50px;
@@ -347,16 +428,15 @@ progress::-webkit-progress-value {
     z-index: 0;
     position: absolute;
     -webkit-animation: fly 110s linear infinite;
-    -webkit-animation-name: fly 110s linear infinite;
-    -webkit-animation-duration: fly 80s linear infinite;
+    animation: fly 110s linear infinite;
 }
 
-.seven {
-    position: absolute;
-    right: 180px;
-    top: 270px;
-    height: 13%;
-    z-index: 0;
+.nine {
+    left: -19px;
+    top: 150px;
+    animation: fly 110s linear infinite;
+    animation-delay: 4s;
+
 }
 
 h1 {
@@ -373,7 +453,7 @@ h1 {
     text-align: center;
     position: relative;
     z-index: 1;
-    background: #BAFFE0
+    background: lightcyan;
 }
 
 #highscorelist {
@@ -470,7 +550,9 @@ div.dodger.flash {
     width: 70px;
     content: url(images/firedrop.gif);
     -webkit-animation: drop 6s linear infinite, driftright 3s linear infinite;
+    animation: drop 6s linear infinite, driftright 3s linear infinite;
     /* animation-delay: 5s; */
+    transform: rotate(305deg);
 }
 
 .fire2 {
@@ -487,9 +569,21 @@ div.dodger.flash {
     bottom: -25px;
     height: 400px;
     width: 400px;
-    animation: bounce 5s infinite, fly 20s infinite;
+    animation: bounce 5s infinite, fly 15s infinite;
     content: url(images/drwily.gif);
     animation-delay: 20s;
+}
+
+.cactuar {
+    position: fixed;
+    left: -350px;
+    bottom: -25px;
+    height: 10%;
+    width: 5%;
+    animation: oscillate 3s infinite, fly 20s infinite;
+    content: url(images/cactuar.gif);
+    animation-delay: 27s;
+    z-index: 1;
 }
 
 .goku {
@@ -515,6 +609,18 @@ div.dodger.flash {
 @keyframes blink {
     50% {
         opacity: 0;
+    }
+}
+
+@-webkit-keyframes color-change2 {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: darkred;
+    }
+    100% {
+        color:orange;
     }
 }
 
@@ -611,6 +717,17 @@ div.dodger.flash {
     }
     100% {
         left: 100%
+    }
+}
+@keyframes driftleft {
+    0% {
+        right: 0%
+    }
+    50% {
+        right: 50%
+    }
+    100% {
+        right: 100%
     }
 }
 
@@ -740,6 +857,42 @@ div.dodger.flash {
     }
     100% {
         bottom: 5px;
+    }
+}
+
+@-webkit-keyframes oscillate {
+    0% {
+        bottom: 0px;
+    }
+    10% {
+        bottom: 150px;
+    }
+    20% {
+        bottom: 300px;
+    }
+    30% {
+        bottom: 450px;
+    }
+    40% {
+        bottom: 600px;
+    }
+    50% {
+        bottom: 650px;
+    }
+    60% {
+        bottom: 600px;
+    }
+    60% {
+        bottom: 450px;
+    }
+    80%{ 
+        bottom: 300px;
+    }
+    90%{ 
+        bottom: 150px;
+    }
+    100% {
+        bottom: 0px;
     }
 }
 

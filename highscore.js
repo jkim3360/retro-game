@@ -44,3 +44,8 @@ const kirby = document.querySelector('.umbrella')
 kirby.addEventListener('click', function() {
     window.location.href = 'main.html'
 })
+
+const magus = document.querySelector('.magusfront')
+magus.addEventListener('click', function() {
+  window.location.href = 'index.html'
+})
