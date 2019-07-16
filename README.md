@@ -22,10 +22,6 @@ Players would approach this game as a desktop version of a simple mobile game wi
 ## technologies & packages
 ESLint, Vanilla JS, CSS, HTML
 
-## launch/build
--how do run the game for users who clone your repo
--normally something like `npm install` then `npm run start` or for this type of vanilla project.
-
 ## major problems & solutions
 - Collision detection, discovering getComputedStyle to grab dimesions and figuring out the boundaries of each sprite
 - Player movement
